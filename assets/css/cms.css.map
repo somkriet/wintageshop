@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,UAAW,CACT,aAAa,CAAE,iBAAiB,CAChC,aAAa,CAAE,IAAI",
-"sources": ["cms.scss"],
-"names": [],
-"file": "cms.css"
-}

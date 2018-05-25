@@ -15,21 +15,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">สั่งซื้อสินค้า</a>
+              <a class="nav-link" href="<?= base_url('index.php/Shopping_cart') ?>">สั่งซื้อสินค้า</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">เกี่ยวกับเรา</a>
+              <a class="nav-link" href="<?= base_url('index.php/About_us') ?>">เกี่ยวกับเรา</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ติดต่อเรา</a>
+              <a class="nav-link" href="<?= base_url('index.php/Contact') ?>">ติดต่อเรา</a>
             </li>
-           <!--   <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('index.php/login') ?>">เข้าสู่ระบบ</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('index.php/register') ?>">สมัครสมาชิก</a>
-
-            </li> -->
             <li class="nav-item dropdown">
                 <?php $data['user'] = $this->session->userdata('login'); ?>
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -20,6 +20,12 @@ Class all_model extends CI_Model
         $q = $this->db->query($query);
     }
 
+    function fetch_all()
+     {
+      $query = $this->db->get("product");
+      return $query->result();
+     }
+ 
     // public function leave_call_all($query)
     // {
     //     $this->db->reconnect();

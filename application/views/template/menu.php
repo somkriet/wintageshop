@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">หน้าแรก
+              <a class="nav-link" href="<?= base_url('index.php/Home') ?>">หน้าแรก
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -18,16 +18,16 @@
               <a class="nav-link" href="#">สั่งซื้อสินค้า</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">บริการของเรา</a>
+              <a class="nav-link" href="#">เกี่ยวกับเรา</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">ติดต่อ</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">สมัครสมาชิก</a>
+             <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('index.php/login') ?>">เข้าสู่ระบบ</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="#">เข้าสู่ระบบ</a>
+              <a class="nav-link" href="<?= base_url('index.php/register') ?>">สมัครสมาชิก</a>
             </li>
           </ul>
         </div>

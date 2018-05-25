@@ -23,7 +23,6 @@
     <div class="container">
 
       <div class="row">
-        aaaaaa
         <?php $this->load->view('template/menu_left'); ?>
 
         <div class="col-lg-9">
@@ -168,7 +167,6 @@
    <?php $this->load->view('template/footer'); ?>
 
     <!-- Bootstrap core JavaScript -->
- 
 
   </body>
 

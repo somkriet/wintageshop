@@ -55,9 +55,9 @@
 
        <div class="row">
         <div class="col-sm-3" ></div>
-        <div class="col-sm-3" >email:</div>
+        <div class="col-sm-3" >username:</div>
         <div class="col-sm-3" >
-          <input id="email" type="text" class="form-control" name="email"  value="">
+          <input id="username" type="text" class="form-control" name="username"  value="">
         </div>
         <div class="col-sm-3" ></div>
       </div>
@@ -79,6 +79,7 @@
         <div class="col-sm-3" ></div>
         <div class="col-sm-3" >
          <button id="login" name="login" class="btn btn-primary">Login</button>
+         <div class="pwstrength_viewport_progress" id="msg_login"></div>
         </div>
         <div class="col-sm-3" ></div>
       </div>
@@ -103,53 +104,46 @@
   
 
     $('#login').on('click', function(){
-      // alert("aaa");
-      // var username = $('#username').val();
-      // var lastname = $('#lastname').val();
-      var email = $('#email').val();
+     
+      var username = $('#username').val();
       var password = $('#password').val();
 
-      // if (username == "") {
-      //   alert("Please input User Name!!");
-      // }
-
-      // if (lastname == "") {
-      //   alert("Please input Last Name!!");
-      // }
-
-      if (email == "") {
-        alert("Please input email!!");
+      if (username == "") {
+        alert("Please input User Name!!");
       }
 
       if (password == "") {
         alert("Please input password!!");
       }
-
+      $('#msg_login').empty();
     $.ajax({
       type: "POST",
       dataType: "JSON",
       url: "<?php echo base_url('index.php/User/user_login');?>",
       data: { 'username': username,
-               'lastname': lastname,
-               'email': email,
                'password': password
              },
+      beforeSend: function(xls){
+      $('#msg_login').html('<img style="margin-bottom: 0px;" src="<?php echo base_url('assets/images/loading.gif')?>">');
+    },
       success: function(res){
 
-        if (res == "success") {
-          alert("success!!");
+        console.log(res);
+      if(res['return']=='error'){
+        $('#msg_login').html('<font color="red"><b>Invalid</b> Username or Password</font>');
+        // alert("Invalid!!  Username or Password");
+        // $('#txt_username').val("");
+        $('#password').val("");
+        $('#password').focus();
+      }else{
+        window.location.href="<?php echo base_url('index.php/home');?>";
+      }
 
-      $('#username').val('');
-      $('#lastname').val('');
-      $('#email').val('');
-      $('#password').val('');
-          location.reload();
-        }else{
-          alert("Not Register!!");
-        }
       }
       
     });
+
+    return false;
   });
 
 

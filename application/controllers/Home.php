@@ -15,13 +15,10 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-
-
 		// $this->session->set_userdata('login',$session_arr);
 		$data['user'] = $this->session->userdata('login');
 
 		// print_r($data['user']); exit();
-
 		$this->load->view('home_view',$data);
 		
 	}

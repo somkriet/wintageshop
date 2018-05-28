@@ -71,8 +71,9 @@ class Shopping_cart extends CI_Controller {
  {
   $this->load->library("cart");
   $output = '';
+
+  // <h3>Shopping Cart</h3><br />
   $output .= '
-  <h3>Shopping Cart</h3><br />
   <div class="table-responsive">
    <div align="right">
     <button type="button" id="clear_cart" class="btn btn-warning">Clear Cart</button>

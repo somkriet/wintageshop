@@ -38,6 +38,8 @@ input[type=submit]:hover {
 </head>
 <body>
 
+     <div class="container">
+
 	<h3>Contact Form</h3>
 
 <div class="container_contact">
@@ -61,6 +63,6 @@ input[type=submit]:hover {
     <input type="submit" value="Submit">
   </form>
 </div>
-
+    </div>
 </body>
 </html>

@@ -35,10 +35,11 @@
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                <img class="d-block img-fluid" src="<?php echo base_url("assets/images/home-page1.png");?>" alt="First slide">
+                 <!-- <img src="<?php //echo base_url("assets/img/banner_product/banner_apron.png"); ?>"/> -->
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                <img class="d-block img-fluid" src="<?php echo base_url("assets/images/home-page2.png");?>" alt="Second slide">
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
@@ -64,12 +65,15 @@
               
              ?> -->
 
+             <!--  <div class="intro-lead-in"><?=$this->lang->line("welcome"); ?></div>
+                <div class="intro-heading"><?=$this->lang->line("body"); ?></div> -->
+
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="#"><?=$this->lang->line("content"); ?></a>
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>

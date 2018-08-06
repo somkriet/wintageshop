@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Manage_stock extends CI_Controller {
 
 	
 	public function __construct() {
@@ -15,28 +15,16 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		if($this->session->userdata('lang')==NULL){
-			$lang = "english";
-			$this->session->set_userdata('lang',$lang);
-		}else{
-			$lang = $this->session->userdata('lang');
-		}
 
 
 		// $this->session->set_userdata('login',$session_arr);
 		$data['user'] = $this->session->userdata('login');
 
 		// print_r($data['user']); exit();
-		
-		$this->lang->load($lang,$lang);
-		$this->load->view('home_view',$data);
+		$this->load->view('template/header');
+		$this->load->view('template/menu',$data);
+		$this->load->view('stock/manage_stock_view',$data);
+		$this->load->view('template/footer');
 		
 	}
-
-	public function change($lang)
-	{
-		$this->session->set_userdata('lang',$lang);
-		redirect($this->router->class,'refresh');
-	}
-	
 }

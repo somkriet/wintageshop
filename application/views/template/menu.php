@@ -38,12 +38,28 @@
                 <a class="dropdown-item" href="<?= base_url('index.php/login') ?>">เข้าสู่ระบบ</a>
                 <?php
                   if ($data['user'] != "") {?>
+                    <a class="dropdown-item" href="<?php echo base_url('index.php/manage_stock');?>">จัดการสต็อคสินค้า</a>
+                    <a class="dropdown-item" href="<?php echo base_url('index.php/logout');?>">จัดการข้อมูลผู้ใช้</a>
                     <a class="dropdown-item" href="<?php echo base_url('index.php/logout');?>">ออกจากระบบ</a>
                  <?php } ?>
                 <a class="dropdown-item" href="<?= base_url('index.php/register') ?>">สมัครสมาชิก</a>
                
               </div>
           </li>
+            <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?=$this->session->userdata('lang'); ?>
+                            <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                            <li><a href="<?php echo base_url("index.php/Home/change/english"); ?>">ENGLISH</a></li>
+                            <li><a href="<?php echo base_url("index.php/Home/change/thailand"); ?>">THAILAND</a></li>
+                         <!--    <li><a href="<?php echo site_url("home/change/japanese"); ?>">JAPANESE</a></li>
+                            <li><a href="<?php echo site_url("home/change/chinese"); ?>">CHINESE</a></li> -->
+                          </ul>
+                           
+                    </li>
+
           </ul>
         </div>
       </div>
